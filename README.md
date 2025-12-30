@@ -58,6 +58,10 @@ These prompts are designed to be:
 
 - **[Code Review Best Practices](prompts/code-review-best-practices.md)** - Improve code quality and foster collaborative team culture through effective code reviews. Covers what to look for, how to give feedback, and building review culture.
 
+### 📚 Documentation
+
+- **[Documentation Consolidation & Cleanup](prompts/documentation-consolidation.md)** - Audit existing documentation, consolidate duplicate content, remove obsolete information, and ensure all documentation accurately reflects the current codebase. Covers documentation discovery, analysis, consolidation strategies, and maintenance best practices.
+
 ### 💻 Frameworks & Languages
 
 - **[Next.js Best Practices](prompts/nextjs-best-practices.md)** - Analyze and optimize Next.js applications. Covers App Router, data fetching strategies, performance optimization, SEO, and production readiness.
@@ -140,6 +144,14 @@ In the era of AI code generation, these prompts are **MORE relevant than ever**:
 3. Follow [Security Best Practices](prompts/security-best-practices.md) for vulnerability scanning
 4. Use [Test Improvement Guide](prompts/test-improvement-guide.md) to ensure comprehensive test coverage in pipeline
 
+#### Example 6: Maintaining Documentation
+
+1. Use [Documentation Consolidation](prompts/documentation-consolidation.md) to audit all project documentation
+2. Identify and remove stale/obsolete documentation
+3. Consolidate duplicate information into single sources of truth
+4. Verify all code examples work with current codebase
+5. Set up automated documentation checks in CI/CD
+
 ## Quick Reference Guide
 
 | Your Situation | Recommended Prompt |
@@ -153,6 +165,7 @@ In the era of AI code generation, these prompts are **MORE relevant than ever**:
 | Application is slow or needs scaling | [Performance Optimization](prompts/performance-optimization.md) |
 | Modeling complex business logic | [Domain-Driven Design](prompts/domain-driven-design.md) |
 | Reviewing pull requests | [Code Review Best Practices](prompts/code-review-best-practices.md) |
+| Documentation is outdated or duplicated | [Documentation Consolidation](prompts/documentation-consolidation.md) |
 | Optimizing Next.js application | [Next.js Best Practices](prompts/nextjs-best-practices.md) |
 | Reviewing Go code | [Golang Best Practices](prompts/golang-best-practices.md) |
 | Auditing Firebase integration | [Firebase Integration Best Practices](prompts/firebase-integration-best-practices.md) |
@@ -173,8 +186,9 @@ In the era of AI code generation, these prompts are **MORE relevant than ever**:
 1. **[API Design Principles](prompts/api-design-principles.md)** - Build interfaces others will use
 2. **[Security Best Practices](prompts/security-best-practices.md)** - Protect your users
 3. **[Performance Optimization](prompts/performance-optimization.md)** - Make it fast
-4. **[CI/CD Workflows](prompts/cicd-workflows.md)** - Automate your deployments
-5. **[Next.js Best Practices](prompts/nextjs-best-practices.md)** or **[Golang Best Practices](prompts/golang-best-practices.md)** - Master your framework
+4. **[Documentation Consolidation](prompts/documentation-consolidation.md)** - Maintain accurate, useful documentation
+5. **[CI/CD Workflows](prompts/cicd-workflows.md)** - Automate your deployments
+6. **[Next.js Best Practices](prompts/nextjs-best-practices.md)** or **[Golang Best Practices](prompts/golang-best-practices.md)** - Master your framework
 
 ### For Advanced Developers
 
