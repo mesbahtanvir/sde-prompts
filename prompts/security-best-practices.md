@@ -21,7 +21,66 @@ Multiple layers of security controls throughout a system. If one layer fails, ot
 
 ---
 
-## Phase 1: OWASP Top 10 (2021)
+## Agentic Workflow
+
+You MUST follow this phased approach. Complete each phase fully before moving to the next.
+
+### Phase 1: Scan for Vulnerabilities
+
+- Run dependency vulnerability scans (npm audit, Snyk)
+- Check for hardcoded secrets
+- Identify OWASP Top 10 patterns
+- **STOP**: Present vulnerability summary and ask "Which areas need deeper analysis?"
+
+### Phase 2: Audit Authentication & Authorization
+
+- Review authentication flows
+- Check authorization on all endpoints
+- Verify session management
+- **STOP**: Present auth audit findings and ask "Which issues are highest priority?"
+
+### Phase 3: Review Data Handling
+
+- Check input validation patterns
+- Verify output encoding
+- Audit sensitive data storage
+- **STOP**: Present data handling issues and ask "Which vulnerabilities should I address first?"
+
+### Phase 4: Propose Fixes
+
+- Create specific remediation proposals
+- Categorize by severity (Critical/High/Medium/Low)
+- Include OWASP and CWE references
+- **STOP**: Present proposals and ask "Which fixes should I implement?"
+
+---
+
+## Constraints
+
+**MUST**:
+
+- Categorize findings by OWASP category and CWE
+- Provide specific code fixes, not just descriptions
+- Test that fixes don't break functionality
+- Verify fixes actually address the vulnerability
+
+**MUST NOT**:
+
+- Introduce new vulnerabilities while fixing others
+- Disable security features to "fix" issues
+- Store secrets in code or version control
+- Implement custom cryptography
+
+**SHOULD**:
+
+- Start with Critical and High severity issues
+- Use security libraries rather than custom code
+- Follow principle of least privilege
+- Add security tests for each fix
+
+---
+
+## Reference: OWASP Top 10 (2021)
 
 ### A01: Broken Access Control
 
@@ -1204,14 +1263,19 @@ const API_KEY = process.env.API_KEY; // ✅
 
 ## Begin
 
-Security is not a feature to add later—it must be built in from the start. Review your codebase for:
+**Your Task**: Conduct a security audit of this codebase.
 
-1. **Injection vulnerabilities**
-2. **Broken authentication**
-3. **Exposed sensitive data**
-4. **Missing access controls**
-5. **Security misconfigurations**
+Run the Agentic Workflow above. Present your initial scan results in this format:
 
-> "The only system which is truly secure is one which is switched off and unplugged, locked in a titanium lined safe, buried in a concrete bunker, and surrounded by nerve gas and very highly paid armed guards. Even then, I wouldn't stake my life on it." — Gene Spafford
+| Category          | Finding               | Severity | OWASP    |
+|-------------------|-----------------------|----------|----------|
+| Dependencies      | N vulnerable packages | High     | A06:2021 |
+| Authentication    | Weak password policy  | Medium   | A07:2021 |
+| Input Validation  | SQL injection risk    | Critical | A03:2021 |
+| ...               | ...                   | ...      | ...      |
+
+Then ask: **"Which areas need deeper security analysis?"**
+
+> "Security is not a product, but a process." — Bruce Schneier
 
 Remember: **Assume breach. Plan accordingly.**
