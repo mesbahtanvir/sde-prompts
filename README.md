@@ -70,6 +70,10 @@ These prompts are designed to be:
 
 - **[Golang Best Practices](prompts/golang-best-practices.md)** - Analyze Go code for idiomatic patterns, concurrency bugs, performance issues, and production readiness. Includes error handling, testing, and tooling.
 
+### 🛠️ Development Tools
+
+- **[Claude Code Skills Setup](prompts/claude-code-skills-setup.md)** - Create custom Claude Code skills for your codebase. Includes role-based skills (reviewer, tester, architect, security auditor), skill templates for all major languages/frameworks, and implementation guides. Automates repetitive tasks and codifies team best practices.
+
 ### ☁️ Cloud & Infrastructure
 
 - **[Firebase Integration Best Practices](prompts/firebase-integration-best-practices.md)** - Audit and optimize Firebase implementations. Covers security rules, Firestore optimization, authentication, Cloud Functions, and cost reduction.
@@ -163,6 +167,15 @@ In the era of AI code generation, these prompts are **MORE relevant than ever**:
 5. Set up automated dead code detection in CI/CD
 6. Measure bundle size reduction and performance improvements
 
+#### Example 8: Setting Up Custom Claude Code Skills
+
+1. Use [Claude Code Skills Setup](prompts/claude-code-skills-setup.md) to analyze your codebase
+2. Create role-based skills (code reviewer, test generator, security auditor)
+3. Customize skills with your tech stack and conventions
+4. Test skills on real code from your project
+5. Document skills for team adoption
+6. Measure productivity improvements and iterate
+
 ## Quick Reference Guide
 
 | Your Situation | Recommended Prompt |
@@ -180,6 +193,7 @@ In the era of AI code generation, these prompts are **MORE relevant than ever**:
 | Documentation is outdated or duplicated | [Documentation Consolidation](prompts/documentation-consolidation.md) |
 | Optimizing Next.js application | [Next.js Best Practices](prompts/nextjs-best-practices.md) |
 | Reviewing Go code | [Golang Best Practices](prompts/golang-best-practices.md) |
+| Need custom Claude Code commands | [Claude Code Skills Setup](prompts/claude-code-skills-setup.md) |
 | Auditing Firebase integration | [Firebase Integration Best Practices](prompts/firebase-integration-best-practices.md) |
 | Optimizing Google Cloud deployment | [Google Cloud Best Practices](prompts/google-cloud-best-practices.md) |
 | Setting up CI/CD pipeline | [CI/CD Workflows](prompts/cicd-workflows.md) |
