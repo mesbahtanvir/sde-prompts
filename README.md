@@ -287,6 +287,7 @@ Auto-generated summary of all prompts in this repository.
 | [Google Cloud Best Practices](prompts/google-cloud-best-practices.md) | 750 | 2488 | 4849 | 18.9 KB |
 | [Nextjs Best Practices](prompts/nextjs-best-practices.md) | 973 | 2885 | 5588 | 21.8 KB |
 | [Performance Optimization](prompts/performance-optimization.md) | 1175 | 4165 | 7534 | 29.4 KB |
+| [Prd Consolidation Audit](prompts/prd-consolidation-audit.md) | 532 | 1673 | 2889 | 11.2 KB |
 | [Prd Driven Development](prompts/prd-driven-development.md) | 301 | 796 | 1254 | 4.8 KB |
 | [Project Bootstrapping Guide](prompts/project-bootstrapping-guide.md) | 1263 | 3480 | 7070 | 27.6 KB |
 | [Prompt Engineering Refinement](prompts/prompt-engineering-refinement.md) | 688 | 2362 | 3864 | 15.0 KB |
@@ -296,7 +297,7 @@ Auto-generated summary of all prompts in this repository.
 | [Test Improvement Guide](prompts/test-improvement-guide.md) | 788 | 2807 | 5140 | 20.0 KB |
 | [Webapp Development Workflow](prompts/webapp-development-workflow.md) | 360 | 1195 | 2107 | 8.2 KB |
 | [Webapp Fullstack Setup](prompts/webapp-fullstack-setup.md) | 1314 | 3786 | 8232 | 32.1 KB |
-| **Total** | **17557** | **57059** | **108060** | **422.0 KB** |
+| **Total** | **18089** | **58732** | **110949** | **433.3 KB** |
 
 *Token count is estimated based on ~4 characters per token.*
 
