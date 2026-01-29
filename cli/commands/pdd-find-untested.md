@@ -1,8 +1,8 @@
-# Audit Test Coverage
+# Find Untested Code
 
-**Usage:** `/pdd-tests [prd-number]`
+**Usage:** `/pdd-find-untested [prd-number]`
 
-Audit test coverage against PRD acceptance criteria.
+Find code without test coverage. Outputs a PRD for missing tests.
 
 **PRD to audit:** $ARGUMENTS
 

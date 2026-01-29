@@ -1,8 +1,8 @@
-# Audit UX Issues
+# Find UX Issues
 
-**Usage:** `/pdd-ux`
+**Usage:** `/pdd-find-ux-issues`
 
-Audit the user experience against best practices and identify improvement opportunities.
+Find user experience problems. Outputs a PRD for UX improvements.
 
 ---
 

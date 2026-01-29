@@ -51,22 +51,22 @@ This installs slash commands to `~/.claude/commands/`, making them available in 
 | Command | Description |
 |---------|-------------|
 | `/pdd-help` | Show all commands and usage |
-| `/pdd-new [type]` | Create a new PRD (feature/bugfix/refactor) |
+| `/pdd-prd-create [type]` | Create a new PRD (feature/bugfix/refactor) |
+| `/pdd-prd-list` | List all PRDs with status |
 | `/pdd-init` | Initialize PDD in current project |
-| `/pdd-status` | Show PRD dashboard |
-| `/pdd-update` | Check for and install updates |
-| `/pdd-features [prd]` | Audit feature implementation |
-| `/pdd-tests [prd]` | Audit test coverage |
-| `/pdd-alignment` | Check PRD vs code alignment |
-| `/pdd-ux` | Audit UX issues |
-| `/pdd-qa` | Find bugs and quality issues |
+| `/pdd-upgrade` | Check for and install updates |
+| `/pdd-find-unimplemented [prd]` | Find PRD features not implemented |
+| `/pdd-find-untested [prd]` | Find code without tests |
+| `/pdd-find-drift` | Find code that doesn't match PRD |
+| `/pdd-find-ux-issues` | Find UX problems |
+| `/pdd-find-bugs` | Find bugs and quality issues |
 
 ### Updating
 
 ```bash
 npm update -g prd-driven-dev
 # or use the slash command:
-/pdd-update
+/pdd-upgrade
 ```
 
 ## Prompts

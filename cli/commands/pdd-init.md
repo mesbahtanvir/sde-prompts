@@ -54,7 +54,7 @@ Every meaningful change must start with a PRD in `docs/prd/`.
 ## Workflow
 
 1. **Check existing PRDs** in `docs/prd/`
-2. **Create a PRD** if one doesn't exist: `/pdd-new`
+2. **Create a PRD** if one doesn't exist: `/pdd-prd-create`
 3. **Reference the PRD** in commits and PRs
 
 ## Git Workflow
@@ -67,10 +67,10 @@ Every meaningful change must start with a PRD in `docs/prd/`.
 
 ## Commands
 
-- `/pdd-new` — Create a new PRD
-- `/pdd-status` — Show PRD dashboard
-- `/pdd-features` — Audit implementation
-- `/pdd-qa` — Find bugs and quality issues
+- `/pdd-prd-create` — Create a new PRD
+- `/pdd-prd-list` — List PRDs with status
+- `/pdd-find-unimplemented` — Find gaps in implementation
+- `/pdd-find-bugs` — Find bugs and quality issues
 ```
 
 ### Step 4: Scan Existing Project
@@ -197,7 +197,7 @@ Note the main source directories (e.g., `src/`, `lib/`, `app/`).
 Do NOT generate PRD-000. Instead, report:
 
 > "No existing documentation found. PDD structure created."
-> "Run `/pdd-new feature` to create your first PRD manually."
+> "Run `/pdd-prd-create feature` to create your first PRD manually."
 
 ### Step 7: Report Results
 
@@ -209,7 +209,7 @@ Do NOT generate PRD-000. Instead, report:
 > - Created: `CLAUDE.md`
 > - Generated: `docs/prd/PRD-000-foundation.md` (from existing docs)
 >
-> "Please review PRD-000 and edit as needed. Run `/pdd-new` for your next PRD."
+> "Please review PRD-000 and edit as needed. Run `/pdd-prd-create` for your next PRD."
 
 **If fallback (no docs found):**
 > "PDD initialized!"
@@ -217,7 +217,7 @@ Do NOT generate PRD-000. Instead, report:
 > - Created: `CLAUDE.md`
 >
 > "No existing documentation found to generate PRD-000."
-> "Run `/pdd-new feature` to create your first PRD."
+> "Run `/pdd-prd-create feature` to create your first PRD."
 
 ---
 

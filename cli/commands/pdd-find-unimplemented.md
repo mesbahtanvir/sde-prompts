@@ -1,8 +1,8 @@
-# Audit Feature Implementation
+# Find Unimplemented PRD Features
 
-**Usage:** `/pdd-features [prd-number]`
+**Usage:** `/pdd-find-unimplemented [prd-number]`
 
-Audit the implementation of a PRD against the codebase to find gaps.
+Find PRD features that are not yet implemented in code. Outputs a PRD for gaps found.
 
 **PRD to audit:** $ARGUMENTS
 

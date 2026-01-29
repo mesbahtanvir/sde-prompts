@@ -43,9 +43,9 @@ async function install() {
 
   console.log(`\n✅ Installed ${commandFiles.length} commands (v${VERSION})`);
   console.log('\nYou can now use these commands in any Claude Code session:');
-  console.log('  /pdd-help     - Show all commands');
-  console.log('  /pdd-new      - Create a new PRD');
-  console.log('  /pdd-init     - Initialize PDD in your project');
+  console.log('  /pdd-help        - Show all commands');
+  console.log('  /pdd-prd-create  - Create a new PRD');
+  console.log('  /pdd-init        - Initialize PDD in your project');
 }
 
 async function uninstall() {
@@ -118,16 +118,16 @@ Usage:
   pdd-dev --help      Show this help message
 
 After installation, these slash commands are available in Claude Code:
-  /pdd-help       Show all PDD commands and usage
-  /pdd-new        Create a new PRD
-  /pdd-init       Initialize PDD in current project
-  /pdd-status     Show PRD dashboard
-  /pdd-update     Check for and install updates
-  /pdd-features   Audit feature implementation
-  /pdd-tests      Audit test coverage
-  /pdd-alignment  Check PRD vs code alignment
-  /pdd-ux         Audit UX issues
-  /pdd-qa         Find bugs and quality issues
+  /pdd-help               Show all PDD commands and usage
+  /pdd-prd-create         Create a new PRD
+  /pdd-prd-list           List all PRDs with status
+  /pdd-init               Initialize PDD in current project
+  /pdd-upgrade            Check for and install updates
+  /pdd-find-unimplemented Find PRD features not implemented
+  /pdd-find-untested      Find code without tests
+  /pdd-find-drift         Find code that doesn't match PRD
+  /pdd-find-ux-issues     Find UX problems
+  /pdd-find-bugs          Find bugs and quality issues
 
 Learn more: https://github.com/mesbahtanvir/prd-driven-dev
 `);

@@ -1,6 +1,6 @@
 # Create a New PRD
 
-**Usage:** `/pdd-new [type]` where type is `feature`, `bugfix`, or `refactor`
+**Usage:** `/pdd-prd-create [type]` where type is `feature`, `bugfix`, or `refactor`
 
 You are a product manager helping create a PRD (Product Requirements Document). Guide the user through an interview to understand their needs and generate a well-structured PRD with specific, testable acceptance criteria.
 

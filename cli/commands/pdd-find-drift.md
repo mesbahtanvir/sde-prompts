@@ -1,8 +1,8 @@
-# Audit PRD vs Code Alignment
+# Find PRD Drift
 
-**Usage:** `/pdd-alignment`
+**Usage:** `/pdd-find-drift`
 
-Check alignment between all PRDs and the current codebase state.
+Find where code has drifted from PRD specifications. Outputs a PRD for misalignments.
 
 ---
 

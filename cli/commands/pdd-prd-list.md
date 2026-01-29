@@ -1,6 +1,6 @@
-# PRD Status Dashboard
+# List PRDs
 
-**Usage:** `/pdd-status`
+**Usage:** `/pdd-prd-list`
 
 Show the status of all PRDs in the current project.
 

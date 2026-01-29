@@ -1,8 +1,8 @@
-# Audit Quality Issues
+# Find Bugs
 
-**Usage:** `/pdd-qa`
+**Usage:** `/pdd-find-bugs`
 
-Find bugs, quality issues, and reliability problems in the codebase.
+Find bugs, quality issues, and reliability problems. Outputs a PRD for fixes.
 
 ---
 

@@ -1,6 +1,6 @@
-# Update PDD Commands
+# Upgrade PDD CLI
 
-**Usage:** `/pdd-update`
+**Usage:** `/pdd-upgrade`
 
 Check for updates to PDD commands and install the latest version.
 

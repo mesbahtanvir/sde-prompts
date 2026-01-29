@@ -4,18 +4,27 @@ Display all available PRD Driven Development commands and their usage.
 
 ## Available Commands
 
+### PRD Management
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/pdd-prd-create` | `/pdd-prd-create [type]` | Create a new PRD (feature/bugfix/refactor) |
+| `/pdd-prd-list` | `/pdd-prd-list` | List all PRDs and their status |
+
+### Find Gaps (each outputs a PRD)
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/pdd-find-unimplemented` | `/pdd-find-unimplemented [prd]` | Find PRD features not implemented |
+| `/pdd-find-untested` | `/pdd-find-untested [prd]` | Find code without tests |
+| `/pdd-find-drift` | `/pdd-find-drift` | Find code that doesn't match PRD |
+| `/pdd-find-ux-issues` | `/pdd-find-ux-issues` | Find UX problems |
+| `/pdd-find-bugs` | `/pdd-find-bugs` | Find bugs and quality issues |
+
+### Tooling
 | Command | Usage | Description |
 |---------|-------|-------------|
 | `/pdd-help` | `/pdd-help` | Show this help message |
-| `/pdd-new` | `/pdd-new [type]` | Create a new PRD (feature/bugfix/refactor) |
 | `/pdd-init` | `/pdd-init` | Initialize PDD in current project |
-| `/pdd-status` | `/pdd-status` | Show all PRDs and their status |
-| `/pdd-update` | `/pdd-update` | Check for and install command updates |
-| `/pdd-features` | `/pdd-features [prd-number]` | Audit feature implementation against PRD |
-| `/pdd-tests` | `/pdd-tests [prd-number]` | Audit test coverage against PRD |
-| `/pdd-alignment` | `/pdd-alignment` | Check PRD vs code alignment |
-| `/pdd-ux` | `/pdd-ux` | Audit UX issues |
-| `/pdd-qa` | `/pdd-qa` | Find bugs and quality issues |
+| `/pdd-upgrade` | `/pdd-upgrade` | Check for and install updates |
 
 ## Quick Start
 
@@ -26,24 +35,24 @@ Display all available PRD Driven Development commands and their usage.
 
 2. **Create your first PRD:**
    ```
-   /pdd-new feature
+   /pdd-prd-create feature
    ```
 
-3. **Check PRD status:**
+3. **List PRD status:**
    ```
-   /pdd-status
+   /pdd-prd-list
    ```
 
-4. **Run audits:**
+4. **Find gaps (outputs a PRD for each):**
    ```
-   /pdd-features 001
-   /pdd-qa
+   /pdd-find-unimplemented 001
+   /pdd-find-bugs
    ```
 
 ## The PDD Cycle
 
 ```
-Write PRD → Implement → Audit → (gaps become new PRDs)
+Write PRD → Implement → Find Gaps → (gaps become new PRDs)
 ```
 
 **Core Principle:** No PRD, No Code.
@@ -51,4 +60,4 @@ Write PRD → Implement → Audit → (gaps become new PRDs)
 ## Learn More
 
 - GitHub: https://github.com/mesbahtanvir/prd-driven-dev
-- Update commands: `/pdd-update` or `npm update -g prd-driven-dev`
+- Update commands: `/pdd-upgrade` or `npm update -g prd-driven-dev`
