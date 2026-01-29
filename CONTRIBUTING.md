@@ -170,11 +170,44 @@ Paste into an AI assistant with sample code:
 ### 3. Submit Pull Request
 
 1. Fork the repository
-2. Create branch: `git checkout -b add-[topic]-prompt`
-3. Add your prompt file
-4. Update README.md if needed
-5. Commit: `git commit -m "Add [topic] prompt"`
-6. Open Pull Request
+2. Create/update a PRD in `docs/prd/` for your change
+3. Create branch: `git checkout -b feat/prd-XXX-short-name`
+4. Implement your changes
+5. Commit: `git commit -m "feat(PRD-XXX): Description"`
+6. Open Pull Request with PRD reference in title
+
+---
+
+## PR Acceptance Criteria
+
+**Every PR must meet these criteria to be merged.** PRs that don't comply will be rejected.
+
+### Before Submitting
+
+- [ ] **PRD exists** — Create or update a PRD in `docs/prd/` for your change
+- [ ] **One PRD per PR** — Each PR changes exactly one PRD file
+- [ ] **Branch naming** — Use `feat/prd-XXX-*` or `fix/prd-XXX-*` format
+- [ ] **PRD quality** — PRD has required sections (Problem, Solution, Acceptance Criteria)
+
+### PR Requirements
+
+- [ ] **Title format** — PR title contains `PRD-XXX` reference (e.g., `feat(PRD-007): Add PR template`)
+- [ ] **CI passes** — All automated checks (lint, PRD validation) must pass
+- [ ] **Description** — PR description explains what's being implemented
+
+### Exceptions
+
+For infrastructure changes (CI, dependencies, docs-only), add `[skip-prd]` to the PR title:
+```
+chore: Update dependencies [skip-prd]
+```
+
+### Why These Rules?
+
+This repository follows **PRD Driven Development** — we practice what we preach:
+- **No PRD, No Code** — Every feature starts with documentation
+- **One PRD, One PR** — Keeps PRs focused and reviewable
+- **Automated enforcement** — CI validates branch naming, title, and PRD changes
 
 ---
 
