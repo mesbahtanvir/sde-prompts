@@ -43,6 +43,7 @@ Start here. These prompts implement the PDD cycle.
 
 | # | Prompt | Purpose |
 |---|--------|---------|
+| 0 | [PRD Creation](prompts/core/00-prd-creation.md) | Create PRDs through guided interview |
 | 1 | [Methodology](prompts/core/01-pdd-methodology.md) | Set up PDD in your project |
 | 2 | [Audit Features](prompts/core/02-audit-features.md) | Are all PRD features implemented? |
 | 3 | [Audit Tests](prompts/core/03-audit-tests.md) | Do all features have tests? |
@@ -124,20 +125,26 @@ Each audit generates PRDs for gaps. The cycle continues until code fully matches
 prd-driven-dev/
 ├── README.md
 ├── CONTRIBUTING.md
+├── CLAUDE.md               # AI assistant context
+├── docs/
+│   └── prd/                # PRDs for THIS repo (we dogfood PDD)
+│       ├── PRD-000-foundation.md
+│       └── ...
 └── prompts/
-    ├── core/           # The PDD workflow (6 prompts)
+    ├── core/               # The PDD workflow (7 prompts)
+    │   ├── 00-prd-creation.md
     │   ├── 01-pdd-methodology.md
     │   ├── 02-audit-features.md
     │   ├── 03-audit-tests.md
     │   ├── 04-audit-alignment.md
     │   ├── 05-audit-ux.md
     │   └── 06-audit-qa.md
-    ├── implement/      # Implementation support (4 prompts)
+    ├── implement/          # Implementation support (4 prompts)
     │   ├── project-setup.md
     │   ├── clean-code.md
     │   ├── testing.md
     │   └── security-performance.md
-    └── reference/      # Deep-dive guides (3 prompts)
+    └── reference/          # Deep-dive guides (3 prompts)
         ├── api-design.md
         ├── cloud-infrastructure.md
         └── production-checklist.md
@@ -245,6 +252,15 @@ gap PRD     as Done
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding or improving prompts.
+
+## This Repository Uses PDD
+
+We practice what we preach. This repository is developed using PRD Driven Development:
+
+- **[docs/prd/](docs/prd/)** — All PRDs for this project
+- **[PRD-000: Foundation](docs/prd/PRD-000-foundation.md)** — The bootstrap PRD defining this project
+
+Every new prompt or significant change starts with a PRD. Check our PRDs to see real-world examples of the methodology in action.
 
 <!-- PROMPT_STATS_START -->
 

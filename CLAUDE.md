@@ -51,6 +51,7 @@ How will we solve it?
 
 | When you need to... | Use this prompt |
 |---------------------|-----------------|
+| Create a new PRD | `prompts/core/00-prd-creation.md` |
 | Understand PDD methodology | `prompts/core/01-pdd-methodology.md` |
 | Find unimplemented PRD features | `prompts/core/02-audit-features.md` |
 | Find missing tests | `prompts/core/03-audit-tests.md` |
