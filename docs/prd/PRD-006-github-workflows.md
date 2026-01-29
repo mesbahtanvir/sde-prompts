@@ -64,14 +64,15 @@ Runs on PRs that modify `docs/prd/*.md`:
 - [ ] AC11: Fails if branch name doesn't match `feat/prd-XXX-*`, `fix/prd-XXX-*`, or `docs/prd-*` pattern
 - [ ] AC12: Fails if PR title doesn't contain `PRD-XXX` reference
 - [ ] AC13: Fails if PR doesn't include a change to a file in `docs/prd/`
-- [ ] AC14: Allows exceptions via `[skip-prd]` in PR title for CI/deps/docs-only changes
+- [ ] AC14: Fails if PR changes more than one PRD file (one PRD per PR)
+- [ ] AC15: Allows exceptions via `[skip-prd]` in PR title for CI/deps/docs-only changes
 
 **PRD Quality Workflow:**
-- [ ] AC15: Workflow runs on PRs that modify files in `docs/prd/`
-- [ ] AC16: Validates PRD contains required sections: Problem Statement, Solution, Acceptance Criteria
-- [ ] AC17: Validates PRD status is one of: Draft, In Progress, Done, Abandoned
-- [ ] AC18: Validates acceptance criteria use checkbox format (`- [ ]` or `- [x]`)
-- [ ] AC19: Warns (doesn't fail) if Out of Scope section is missing
+- [ ] AC16: Workflow runs on PRs that modify files in `docs/prd/`
+- [ ] AC17: Validates PRD contains required sections: Problem Statement, Solution, Acceptance Criteria
+- [ ] AC18: Validates PRD status is one of: Draft, In Progress, Done, Abandoned
+- [ ] AC19: Validates acceptance criteria use checkbox format (`- [ ]` or `- [x]`)
+- [ ] AC20: Warns (doesn't fail) if Out of Scope section is missing
 
 ## Out of Scope
 

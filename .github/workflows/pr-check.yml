@@ -88,5 +88,20 @@ jobs:
             exit 1
           fi
 
-          echo "✅ PRD file changes detected:"
+          # Count PRD files changed
+          PRD_COUNT=$(echo "$PRD_CHANGES" | wc -l | tr -d ' ')
+
+          if [ "$PRD_COUNT" -gt 1 ]; then
+            echo "❌ Multiple PRD files changed ($PRD_COUNT files)"
+            echo ""
+            echo "Only ONE PRD file should change per PR to keep PRs focused."
+            echo ""
+            echo "Changed PRD files:"
+            echo "$PRD_CHANGES"
+            echo ""
+            echo "Please split this into separate PRs, one per PRD."
+            exit 1
+          fi
+
+          echo "✅ PRD file changes detected (1 file):"
           echo "$PRD_CHANGES"
