@@ -149,6 +149,10 @@ After installation, these slash commands are available in Claude Code:
   /pdd-find-drift         Find code that doesn't match PRD
   /pdd-find-ux-issues     Find UX problems
   /pdd-find-bugs          Find bugs and quality issues
+  /pdd-audit-devops       Audit deployment and infrastructure
+  /pdd-audit-security     Audit security vulnerabilities
+  /pdd-audit-production   Full production readiness check
+  /pdd-audit-all          Run all audits in sequence
 
 Learn more: https://github.com/mesbahtanvir/prd-driven-dev
 `);

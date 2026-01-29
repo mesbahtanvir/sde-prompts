@@ -19,6 +19,14 @@ Display all available PRD Driven Development commands and their usage.
 | `/pdd-find-ux-issues` | `/pdd-find-ux-issues` | Find UX problems |
 | `/pdd-find-bugs` | `/pdd-find-bugs` | Find bugs and quality issues |
 
+### Operations Audits (each outputs a report)
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/pdd-audit-devops` | `/pdd-audit-devops` | Audit deployment, CI/CD, and infrastructure |
+| `/pdd-audit-security` | `/pdd-audit-security` | Audit security vulnerabilities and risks |
+| `/pdd-audit-production` | `/pdd-audit-production` | Full production readiness check |
+| `/pdd-audit-all` | `/pdd-audit-all` | Run all three audits in sequence |
+
 ### Tooling
 | Command | Usage | Description |
 |---------|-------|-------------|

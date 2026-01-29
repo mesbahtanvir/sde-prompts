@@ -81,10 +81,26 @@ How will we solve it?
 | Add comprehensive tests | `prompts/implement/testing.md` |
 | Audit security/performance | `prompts/implement/security-performance.md` |
 
+## Pre-Commit Checks
+
+**Before committing**, always run markdown lint to catch formatting issues:
+
+```bash
+npx markdownlint-cli2 "**/*.md" "!node_modules/**" "!cli/node_modules/**"
+```
+
+Common issues to avoid:
+
+- **MD029**: Ordered lists should restart at 1 after headings
+- **MD012**: No multiple consecutive blank lines
+- **MD009**: No trailing spaces
+- **MD047**: Files should end with a single newline
+
 ## Commit Convention
 
 Reference PRDs in commits:
-```
+
+```text
 feat(PRD-001): Add PRD creation prompt
 
 Implements the interactive PRD creation workflow.
