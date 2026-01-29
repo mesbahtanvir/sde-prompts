@@ -1,317 +1,260 @@
-# Software Development Prompts
+# PRD Driven Development (PDD)
 
-A curated collection of reusable, codebase-agnostic prompts for common software development tasks. Use these prompts with AI assistants to improve code quality, add tests, refactor, and more.
+**No PRD, No Code.**
 
-## Overview
+A methodology for AI-assisted software development where every feature starts with a documented requirement. Like TDD ensures tests exist before code, PDD ensures PRDs exist before implementation.
 
-A comprehensive collection of prompts to help you with every stage of software development - from starting new projects to improving existing codebases.
+## The PDD Cycle
 
-These prompts are designed to be:
-
-- **Reusable**: Work with any codebase, language, or framework
-- **Comprehensive**: Based on industry best practices and proven methodologies
-- **Actionable**: Provide clear, step-by-step guidance
-- **Versatile**: Help with existing codebases, new projects, and bootstrapping
-- **Structured**: Follow consistent formats for easy adoption
-
-### Use Cases
-
-- **Starting New Projects**: Bootstrap with best practices using the [Project Bootstrapping Guide](prompts/project-bootstrapping-guide.md)
-- **Improving Existing Code**: Refactor, optimize, and secure your current codebase
-- **Code Reviews**: Use as comprehensive checklists for reviewing pull requests
-- **Learning**: Follow the learning paths to master software development best practices
-- **Team Standards**: Establish coding standards and best practices across your team
-
-## Available Prompts
-
-### 🚀 Project Setup
-
-- **[Project Bootstrapping Guide](prompts/project-bootstrapping-guide.md)** - Bootstrap new projects with best practices from day one. Covers technology stack selection, development environment setup, tooling configuration, and production-ready configurations for popular stacks (Next.js + Firebase, Go + PostgreSQL, Python + FastAPI).
-
-### 🎨 Code Quality & Refactoring
-
-- **[Clean Code Refactoring](prompts/clean-code-refactoring.md)** - Transform your codebase into clean, professional code based on Robert C. Martin's "Clean Code" principles. Covers naming, functions, comments, formatting, classes, and code smells.
-
-- **[Code Cleanup & Simplification](prompts/code-cleanup-simplification.md)** - Eliminate technical debt by removing dead code, unused dependencies, legacy features, and over-engineered solutions. Includes detection tools, cleanup strategies, and simplification patterns for all major languages.
-
-### 🧪 Testing
-
-- **[Test-Driven Development (TDD)](prompts/test-driven-development.md)** - Add comprehensive tests to existing code using characterization tests and TDD principles. Based on Kent Beck's TDD methodology with practical patterns for legacy code.
-
-- **[Test Improvement Guide](prompts/test-improvement-guide.md)** - Analyze and improve existing test suites. Identify coverage gaps, eliminate flaky tests, and enhance test quality and maintainability.
-
-### 🔌 API Design
-
-- **[API Design Principles](prompts/api-design-principles.md)** - Design APIs that are intuitive, consistent, and future-proof. Covers RESTful design, versioning, authentication, pagination, error handling, and documentation.
-
-### 🔒 Security
-
-- **[Security Best Practices](prompts/security-best-practices.md)** - Build secure systems that protect user data and prevent attacks. Comprehensive coverage of OWASP Top 10, input validation, authentication, encryption, and security headers.
-
-### ⚡ Performance
-
-- **[Performance Optimization](prompts/performance-optimization.md)** - Build fast, efficient systems that scale gracefully. Covers frontend optimization, backend performance, database tuning, caching strategies, and monitoring.
-
-### 🏗️ Architecture & Design
-
-- **[Domain-Driven Design (DDD)](prompts/domain-driven-design.md)** - Create software that models complex business domains with precision. Covers ubiquitous language, bounded contexts, entities, value objects, aggregates, and strategic design.
-
-### 🤝 Collaboration
-
-- **[Code Review Best Practices](prompts/code-review-best-practices.md)** - Improve code quality and foster collaborative team culture through effective code reviews. Covers what to look for, how to give feedback, and building review culture.
-
-### 📚 Documentation
-
-- **[Documentation Consolidation & Cleanup](prompts/documentation-consolidation.md)** - Audit existing documentation, consolidate duplicate content, remove obsolete information, and ensure all documentation accurately reflects the current codebase. Covers documentation discovery, analysis, consolidation strategies, and maintenance best practices.
-
-### 💻 Frameworks & Languages
-
-- **[Next.js Best Practices](prompts/nextjs-best-practices.md)** - Analyze and optimize Next.js applications. Covers App Router, data fetching strategies, performance optimization, SEO, and production readiness.
-
-- **[Golang Best Practices](prompts/golang-best-practices.md)** - Analyze Go code for idiomatic patterns, concurrency bugs, performance issues, and production readiness. Includes error handling, testing, and tooling.
-
-### 🛠️ Development Tools
-
-- **[Claude Code Skills Setup](prompts/claude-code-skills-setup.md)** - Create custom Claude Code skills for your codebase. Includes role-based skills (reviewer, tester, architect, security auditor), skill templates for all major languages/frameworks, and implementation guides. Automates repetitive tasks and codifies team best practices.
-
-- **[Prompt Engineering Refinement](prompts/prompt-engineering-refinement.md)** - Analyze and optimize AI prompts for clarity, effectiveness, and consistent results. Covers the 5 core elements of prompts, common problems, refinement process, quality metrics, and advanced techniques. Includes templates for code review, bug analysis, and feature implementation prompts.
-
-### ☁️ Cloud & Infrastructure
-
-- **[Firebase Integration Best Practices](prompts/firebase-integration-best-practices.md)** - Audit and optimize Firebase implementations. Covers security rules, Firestore optimization, authentication, Cloud Functions, and cost reduction.
-
-- **[Google Cloud Best Practices](prompts/google-cloud-best-practices.md)** - Analyze and optimize GCP deployments. Covers IAM, cost optimization, compute services, databases, monitoring, and security.
-
-### 🔄 DevOps & CI/CD
-
-- **[CI/CD Workflows for Full-Stack Applications](prompts/cicd-workflows.md)** - Set up automated build, test, and deployment pipelines. Covers GitHub Actions, GitLab CI, deployment strategies (blue-green, canary), rollback mechanisms, environment management, and monitoring for full-stack applications.
-
-## How to Use
-
-1. **Choose a prompt** that matches your task
-2. **Copy the entire prompt** content
-3. **Paste it into your AI assistant** conversation (Claude, GPT, etc.)
-4. **Provide context** about your codebase
-5. **Let the AI guide you** through the process
-
-### Example Usage
-
-```text
-[Paste the Clean Code Refactoring prompt]
-
-Now analyze this codebase and help me refactor it:
-[Your code or repository context]
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│   1. WRITE PRD     →     2. IMPLEMENT     →     3. AUDIT           │
+│   (Requirements)          (Code)                (Verify)            │
+│         ▲                                          │                │
+│         │                                          │                │
+│         └──────────────────────────────────────────┘                │
+│                     (Gap found → New PRD)                           │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
 ```
 
-### Why These Prompts Matter in the AI Age
+**Step 1: Write PRD** — Document what you're building before writing code
+**Step 2: Implement** — Write code that satisfies the PRD
+**Step 3: Audit** — Verify code matches PRD; gaps become new PRDs
 
-In the era of AI code generation, these prompts are **MORE relevant than ever**:
+## Why PDD?
 
-- **Better AI Prompting**: Use these as frameworks to get better output from AI coding assistants
-- **Code Review**: AI generates code fast - you still need to review it for quality, security, and performance
-- **Architecture Decisions**: AI can write code, but you still need to make architectural choices
-- **Team Standards**: Establish consistent patterns that both humans and AI should follow
-- **Learning**: Understanding these principles helps you write better prompts and evaluate AI-generated code
+| Problem | PDD Solution |
+|---------|--------------|
+| Features drift from requirements | PRD is the contract |
+| "What does this code do?" | PRD explains intent |
+| Missing acceptance criteria | PRD defines done |
+| Undocumented decisions | PRD captures context |
+| AI generates wrong thing | PRD guides AI precisely |
 
-**The shift**: From "writing all code yourself" → "reviewing, guiding, and architecting with AI assistance"
+## Prompts
 
-### Practical Examples
+This repository contains prompts to facilitate PDD workflows with AI assistants.
 
-#### Example 1: Starting a New Next.js + Firebase Project
+### Core: The PDD Workflow
 
-1. Use [Project Bootstrapping Guide](prompts/project-bootstrapping-guide.md) to set up the project with best practices
-2. Apply [Next.js Best Practices](prompts/nextjs-best-practices.md) for App Router patterns
-3. Use [Firebase Integration Best Practices](prompts/firebase-integration-best-practices.md) for secure setup
-4. Follow [Security Best Practices](prompts/security-best-practices.md) from day one
+Start here. These prompts implement the PDD cycle.
 
-#### Example 2: Refactoring Legacy Code
+| # | Prompt | Purpose |
+|---|--------|---------|
+| 1 | [Methodology](prompts/core/01-pdd-methodology.md) | Set up PDD in your project |
+| 2 | [Audit Features](prompts/core/02-audit-features.md) | Are all PRD features implemented? |
+| 3 | [Audit Tests](prompts/core/03-audit-tests.md) | Do all features have tests? |
+| 4 | [Audit Alignment](prompts/core/04-audit-alignment.md) | Does code match documentation? |
+| 5 | [Audit UX](prompts/core/05-audit-ux.md) | Is the user experience good? |
+| 6 | [Audit QA](prompts/core/06-audit-qa.md) | Are there bugs or quality issues? |
 
-1. Use [Clean Code Refactoring](prompts/clean-code-refactoring.md) to identify smells and improve structure
-2. Apply [Security Best Practices](prompts/security-best-practices.md) to fix vulnerabilities
-3. Use [TDD](prompts/test-driven-development.md) to add tests for refactored code
-4. Optimize with [Performance Optimization](prompts/performance-optimization.md)
+### Implementation Support
 
-#### Example 3: Building a New API
+Use these when implementing features from your PRDs.
 
-1. Use [API Design Principles](prompts/api-design-principles.md) to design endpoints
-2. Apply [Security Best Practices](prompts/security-best-practices.md) for authentication and validation
-3. Use [Performance Optimization](prompts/performance-optimization.md) to ensure scalability
-4. Follow [Golang Best Practices](prompts/golang-best-practices.md) if using Go
+| Prompt | Purpose |
+|--------|---------|
+| [Project Setup](prompts/implement/project-setup.md) | Bootstrap new projects |
+| [Clean Code](prompts/implement/clean-code.md) | Refactor and improve code quality |
+| [Testing](prompts/implement/testing.md) | Add comprehensive tests |
+| [Security & Performance](prompts/implement/security-performance.md) | Audit security and optimize performance |
 
-#### Example 4: Code Review
+### Reference
 
-1. Use [Code Review Best Practices](prompts/code-review-best-practices.md) as a checklist
-2. Reference [Clean Code](prompts/clean-code-refactoring.md) for readability issues
-3. Check [Security Best Practices](prompts/security-best-practices.md) for vulnerabilities
-4. Verify [Test Improvement Guide](prompts/test-improvement-guide.md) for test quality
+Deep-dive guides for specific topics.
 
-#### Example 5: Setting Up Production-Ready CI/CD
+| Prompt | Purpose |
+|--------|---------|
+| [API Design](prompts/reference/api-design.md) | Design intuitive, consistent APIs |
+| [Cloud Infrastructure](prompts/reference/cloud-infrastructure.md) | Deploy and manage production systems |
+| [Production Checklist](prompts/reference/production-checklist.md) | Pre-launch verification |
 
-1. Use [Project Bootstrapping Guide](prompts/project-bootstrapping-guide.md) to set up project structure
-2. Apply [CI/CD Workflows](prompts/cicd-workflows.md) to automate testing and deployment
-3. Follow [Security Best Practices](prompts/security-best-practices.md) for vulnerability scanning
-4. Use [Test Improvement Guide](prompts/test-improvement-guide.md) to ensure comprehensive test coverage in pipeline
+## Quick Start
 
-#### Example 6: Maintaining Documentation
+### 1. Set Up PDD in Your Project
 
-1. Use [Documentation Consolidation](prompts/documentation-consolidation.md) to audit all project documentation
-2. Identify and remove stale/obsolete documentation
-3. Consolidate duplicate information into single sources of truth
-4. Verify all code examples work with current codebase
-5. Set up automated documentation checks in CI/CD
+```bash
+# Use the methodology prompt to set up:
+# - docs/prd/ directory
+# - PR templates
+# - CLAUDE.md
+```
 
-#### Example 7: Reducing Technical Debt
+### 2. Create a PRD Before Coding
 
-1. Use [Code Cleanup & Simplification](prompts/code-cleanup-simplification.md) to identify dead code and unused dependencies
-2. Remove commented-out code and legacy features
-3. Simplify over-engineered abstractions
-4. Consolidate duplicate code
-5. Set up automated dead code detection in CI/CD
-6. Measure bundle size reduction and performance improvements
+```markdown
+# PRD-001: User Authentication
 
-#### Example 8: Setting Up Custom Claude Code Skills
+**Status:** Draft
 
-1. Use [Claude Code Skills Setup](prompts/claude-code-skills-setup.md) to analyze your codebase
-2. Create role-based skills (code reviewer, test generator, security auditor)
-3. Customize skills with your tech stack and conventions
-4. Test skills on real code from your project
-5. Document skills for team adoption
-6. Measure productivity improvements and iterate
+## Problem
+Users need to log in to access their data.
 
-#### Example 9: Improving AI Prompts
+## Solution
+Implement email/password authentication with Firebase.
 
-1. Use [Prompt Engineering Refinement](prompts/prompt-engineering-refinement.md) to analyze your existing prompts
-2. Rate prompts on the 7 quality dimensions
-3. Identify vague instructions, missing context, or unclear output formats
-4. Apply refinement techniques (add examples, specify constraints, improve structure)
-5. Test refined prompts and measure consistency
-6. Create reusable prompt templates for your team
+## Acceptance Criteria
+- [ ] User can sign up with email
+- [ ] User can sign in with email
+- [ ] User can sign out
+- [ ] Session persists on refresh
+```
 
-## Quick Reference Guide
+### 3. Implement Per PRD
 
-| Your Situation | Recommended Prompt |
-| --- | --- |
-| Starting a new project | [Project Bootstrapping Guide](prompts/project-bootstrapping-guide.md) |
-| Code is hard to read and maintain | [Clean Code Refactoring](prompts/clean-code-refactoring.md) |
-| Codebase has unused code and complexity | [Code Cleanup & Simplification](prompts/code-cleanup-simplification.md) |
-| Need to add tests to existing code | [Test-Driven Development](prompts/test-driven-development.md) |
-| Tests are flaky or have poor coverage | [Test Improvement Guide](prompts/test-improvement-guide.md) |
-| Reviewing or improving existing APIs | [API Design Principles](prompts/api-design-principles.md) |
-| Security audit or handling sensitive data | [Security Best Practices](prompts/security-best-practices.md) |
-| Application is slow or needs scaling | [Performance Optimization](prompts/performance-optimization.md) |
-| Modeling complex business logic | [Domain-Driven Design](prompts/domain-driven-design.md) |
-| Reviewing pull requests | [Code Review Best Practices](prompts/code-review-best-practices.md) |
-| Documentation is outdated or duplicated | [Documentation Consolidation](prompts/documentation-consolidation.md) |
-| Optimizing Next.js application | [Next.js Best Practices](prompts/nextjs-best-practices.md) |
-| Reviewing Go code | [Golang Best Practices](prompts/golang-best-practices.md) |
-| Need custom Claude Code commands | [Claude Code Skills Setup](prompts/claude-code-skills-setup.md) |
-| AI prompts producing unclear results | [Prompt Engineering Refinement](prompts/prompt-engineering-refinement.md) |
-| Auditing Firebase integration | [Firebase Integration Best Practices](prompts/firebase-integration-best-practices.md) |
-| Optimizing Google Cloud deployment | [Google Cloud Best Practices](prompts/google-cloud-best-practices.md) |
-| Setting up CI/CD pipeline | [CI/CD Workflows](prompts/cicd-workflows.md) |
+Code only what the PRD specifies. Link PRD in your PR.
 
-## Learning Path
+### 4. Audit for Gaps
 
-### For Beginners
+Run audit prompts to find:
+- Unimplemented features → new PRD
+- Missing tests → new PRD
+- UX issues → new PRD
+- Bugs → new PRD
 
-1. **[Project Bootstrapping Guide](prompts/project-bootstrapping-guide.md)** - Start projects the right way
-2. **[Clean Code Refactoring](prompts/clean-code-refactoring.md)** - Foundation for all good code
-3. **[Test-Driven Development](prompts/test-driven-development.md)** - Build quality from the start
-4. **[Code Review Best Practices](prompts/code-review-best-practices.md)** - Learn to evaluate code
+### 5. Repeat
 
-### For Intermediate Developers
+Each audit generates PRDs for gaps. The cycle continues until code fully matches documentation.
 
-1. **[API Design Principles](prompts/api-design-principles.md)** - Build interfaces others will use
-2. **[Security Best Practices](prompts/security-best-practices.md)** - Protect your users
-3. **[Performance Optimization](prompts/performance-optimization.md)** - Make it fast
-4. **[Code Cleanup & Simplification](prompts/code-cleanup-simplification.md)** - Eliminate technical debt
-5. **[Documentation Consolidation](prompts/documentation-consolidation.md)** - Maintain accurate, useful documentation
-6. **[CI/CD Workflows](prompts/cicd-workflows.md)** - Automate your deployments
-7. **[Next.js Best Practices](prompts/nextjs-best-practices.md)** or **[Golang Best Practices](prompts/golang-best-practices.md)** - Master your framework
+## Repository Structure
 
-### For Advanced Developers
+```
+prd-driven-dev/
+├── README.md
+├── CONTRIBUTING.md
+└── prompts/
+    ├── core/           # The PDD workflow (6 prompts)
+    │   ├── 01-pdd-methodology.md
+    │   ├── 02-audit-features.md
+    │   ├── 03-audit-tests.md
+    │   ├── 04-audit-alignment.md
+    │   ├── 05-audit-ux.md
+    │   └── 06-audit-qa.md
+    ├── implement/      # Implementation support (4 prompts)
+    │   ├── project-setup.md
+    │   ├── clean-code.md
+    │   ├── testing.md
+    │   └── security-performance.md
+    └── reference/      # Deep-dive guides (3 prompts)
+        ├── api-design.md
+        ├── cloud-infrastructure.md
+        └── production-checklist.md
+```
 
-1. **[Domain-Driven Design](prompts/domain-driven-design.md)** - Master complex business domains
-2. **[Google Cloud Best Practices](prompts/google-cloud-best-practices.md)** - Build scalable cloud infrastructure
+## How to Use These Prompts
+
+### With Claude Code
+
+```bash
+# Paste prompt content, then:
+"Set up PDD in this project"
+"Audit this codebase for missing features"
+"Help me write a PRD for user authentication"
+```
+
+### With Other AI Assistants
+
+Copy the prompt content into your AI chat. The prompts are designed to work with any capable AI assistant.
+
+### As Claude Code Skills
+
+Create custom skills in your project:
+
+```markdown
+# .claude/commands/prd.md
+[Paste 01-pdd-methodology.md content]
+
+# Usage: /prd
+```
+
+## The PDD Decision Tree
+
+```
+New work requested
+        │
+        ▼
+   Is there a PRD?
+        │
+   ┌────┴────┐
+   No        Yes
+   │          │
+   ▼          ▼
+Write PRD   Implement
+first       per PRD
+   │          │
+   ▼          │
+Get PRD     ◄─┘
+approved
+   │
+   ▼
+Implement
+   │
+   ▼
+Audit: Does code match PRD?
+        │
+   ┌────┴────┐
+   No        Yes
+   │          │
+   ▼          ▼
+Create      Mark PRD
+gap PRD     as Done
+```
+
+## What Needs a PRD?
+
+### Needs PRD
+- New features
+- Bug fixes affecting users
+- UI/UX changes
+- API changes
+- Database schema changes
+
+### Skip PRD
+- Typo fixes
+- Dependency updates
+- Documentation only
+- Internal refactoring
+- CI/CD changes
+
+## PRD Template
+
+```markdown
+# PRD-[NUMBER]: [Title]
+
+**Status:** Draft | Approved | Done
+**Author:** @username
+**Date:** YYYY-MM-DD
+
+## Problem
+[What problem are we solving?]
+
+## Solution
+[How will we solve it?]
+
+## Acceptance Criteria
+- [ ] [Specific, testable requirement]
+- [ ] [Specific, testable requirement]
+- [ ] [Specific, testable requirement]
+
+## Out of Scope
+- [What we're NOT doing]
+```
 
 ## Contributing
 
-Have a great reusable prompt? Contributions are welcome! We'd love to expand this collection with more comprehensive, high-quality prompts.
-
-**See our [Contributing Guide](CONTRIBUTING.md)** for detailed instructions on:
-
-- What makes a good prompt
-- Template and structure to follow
-- Style guide and code examples
-- Submission process
-- 30+ prompt ideas we'd love to see
-
-### Quick Contribution Steps
-
-1. Read the [Contributing Guide](CONTRIBUTING.md)
-2. Create a new prompt file in the `prompts/` directory following the template
-3. Add your prompt to this README under the appropriate category
-4. Test your prompt with an AI assistant
-5. Submit a pull request
-
-We're particularly interested in prompts for:
-
-- **Development Practices**: Git workflows, microservices, event-driven architecture, pair programming
-- **Languages & Frameworks**: Python, TypeScript, React, Vue.js, Django, Spring Boot
-- **Infrastructure**: Docker, Kubernetes, AWS, Azure, Terraform
-- **Data & Backend**: PostgreSQL, MongoDB, GraphQL, message queues
-- **Specialized Topics**: Machine learning, blockchain, serverless, WebAssembly
-
-See the full list in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-<!-- PROMPT_STATS_START -->
-
-## Prompt Statistics
-
-Auto-generated summary of all prompts in this repository.
-
-| Prompt | Lines | Words | Tokens (est.) | Size |
-|--------|------:|------:|--------------:|-----:|
-| [Api Design Principles](prompts/api-design-principles.md) | 984 | 3070 | 5750 | 22.4 KB |
-| [Cicd Workflows](prompts/cicd-workflows.md) | 1300 | 3897 | 8505 | 33.2 KB |
-| [Claude Code Skills Setup](prompts/claude-code-skills-setup.md) | 152 | 549 | 921 | 3.5 KB |
-| [Clean Code Refactoring](prompts/clean-code-refactoring.md) | 496 | 2325 | 3852 | 15.0 KB |
-| [Code Cleanup Simplification](prompts/code-cleanup-simplification.md) | 191 | 759 | 1376 | 5.3 KB |
-| [Code Review Best Practices](prompts/code-review-best-practices.md) | 127 | 513 | 905 | 3.5 KB |
-| [Company Research Scorecard](prompts/company-research-scorecard.md) | 306 | 1172 | 1682 | 6.5 KB |
-| [Documentation Consolidation](prompts/documentation-consolidation.md) | 817 | 2976 | 5213 | 20.3 KB |
-| [Domain Driven Design](prompts/domain-driven-design.md) | 1227 | 3705 | 7955 | 31.0 KB |
-| [Firebase Integration Best Practices](prompts/firebase-integration-best-practices.md) | 960 | 3208 | 6355 | 24.8 KB |
-| [Github Actions Optimization](prompts/github-actions-optimization.md) | 1251 | 3415 | 7319 | 28.5 KB |
-| [Golang Best Practices](prompts/golang-best-practices.md) | 723 | 2323 | 3931 | 15.3 KB |
-| [Google Cloud Best Practices](prompts/google-cloud-best-practices.md) | 750 | 2488 | 4849 | 18.9 KB |
-| [Nextjs Best Practices](prompts/nextjs-best-practices.md) | 973 | 2885 | 5588 | 21.8 KB |
-| [Performance Optimization](prompts/performance-optimization.md) | 1175 | 4165 | 7534 | 29.4 KB |
-| [Prd Consolidation Audit](prompts/prd-consolidation-audit.md) | 532 | 1673 | 2889 | 11.2 KB |
-| [Prd Driven Development](prompts/prd-driven-development.md) | 301 | 796 | 1254 | 4.8 KB |
-| [Project Bootstrapping Guide](prompts/project-bootstrapping-guide.md) | 1263 | 3480 | 7070 | 27.6 KB |
-| [Prompt Engineering Refinement](prompts/prompt-engineering-refinement.md) | 688 | 2362 | 3864 | 15.0 KB |
-| [Security Best Practices](prompts/security-best-practices.md) | 172 | 704 | 1382 | 5.3 KB |
-| [Startup Due Diligence](prompts/startup-due-diligence.md) | 354 | 1390 | 1950 | 7.6 KB |
-| [Test Driven Development](prompts/test-driven-development.md) | 885 | 3089 | 5326 | 20.8 KB |
-| [Test Improvement Guide](prompts/test-improvement-guide.md) | 788 | 2807 | 5140 | 20.0 KB |
-| [Webapp Development Workflow](prompts/webapp-development-workflow.md) | 360 | 1195 | 2107 | 8.2 KB |
-| [Webapp Fullstack Setup](prompts/webapp-fullstack-setup.md) | 1314 | 3786 | 8232 | 32.1 KB |
-| **Total** | **18089** | **58732** | **110949** | **433.3 KB** |
-
-*Token count is estimated based on ~4 characters per token.*
-
-<!-- PROMPT_STATS_END -->
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding or improving prompts.
 
 ## Credits
 
-These prompts are based on seminal works and industry best practices:
+These prompts incorporate principles from:
 
-- **Robert C. Martin** - "Clean Code" and clean code principles
-- **Kent Beck** - "Test Driven Development: By Example"
-- **Eric Evans** - "Domain-Driven Design"
-- **OWASP Foundation** - Security best practices and Top 10 vulnerabilities
-- **Industry standards** - RESTful API design, performance optimization, code review practices
+- **Robert C. Martin** - "Clean Code"
+- **Kent Beck** - "Test Driven Development"
+- **OWASP Foundation** - Security best practices
+- **Nielsen Norman Group** - Usability heuristics
+- **Industry standards** - RESTful API design, performance optimization
 
 ## License
 
@@ -319,4 +262,4 @@ MIT
 
 ---
 
-**Remember**: These prompts are guides, not rigid rules. Adapt them to your context, team, and needs. The goal is better software and stronger teams.
+**Remember: No PRD, No Code.**
