@@ -12,6 +12,21 @@ function ensureDir(dir) {
   }
 }
 
+function cleanupPddCommands() {
+  if (!fs.existsSync(CLAUDE_COMMANDS_DIR)) {
+    return 0;
+  }
+
+  const files = fs.readdirSync(CLAUDE_COMMANDS_DIR);
+  const pddFiles = files.filter(f => f.startsWith('pdd-') && f.endsWith('.md'));
+
+  for (const file of pddFiles) {
+    fs.unlinkSync(path.join(CLAUDE_COMMANDS_DIR, file));
+  }
+
+  return pddFiles.length;
+}
+
 function getInstalledVersion() {
   const helpFile = path.join(CLAUDE_COMMANDS_DIR, 'pdd-help.md');
   if (fs.existsSync(helpFile)) {
@@ -26,6 +41,12 @@ async function install() {
   console.log('Installing PDD commands to ~/.claude/commands/...\n');
 
   ensureDir(CLAUDE_COMMANDS_DIR);
+
+  // Clean up old pdd-* commands before installing (handles deprecated commands)
+  const cleanedUp = cleanupPddCommands();
+  if (cleanedUp > 0) {
+    console.log(`  🧹 Cleaned up ${cleanedUp} old command(s)\n`);
+  }
 
   const commandFiles = fs.readdirSync(COMMANDS_DIR).filter(f => f.endsWith('.md'));
 
