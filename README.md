@@ -246,6 +246,20 @@ gap PRD     as Done
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding or improving prompts.
 
+<!-- PROMPT_STATS_START -->
+
+## Prompt Statistics
+
+Auto-generated summary of all prompts in this repository.
+
+| Prompt | Lines | Words | Tokens (est.) | Size |
+|--------|------:|------:|--------------:|-----:|
+| **Total** | **0** | **0** | **0** | **0 B** |
+
+*Token count is estimated based on ~4 characters per token.*
+
+<!-- PROMPT_STATS_END -->
+
 ## Credits
 
 These prompts incorporate principles from:
