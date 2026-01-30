@@ -27,6 +27,11 @@ Display all available PRD Driven Development commands and their usage.
 | `/pdd-audit-production` | `/pdd-audit-production` | Full production readiness check |
 | `/pdd-audit-all` | `/pdd-audit-all` | Run all three audits in sequence |
 
+### Code Quality
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/pdd-code-compact` | `/pdd-code-compact` | Audit code against Clean Code principles |
+
 ### Tooling
 | Command | Usage | Description |
 |---------|-------|-------------|
