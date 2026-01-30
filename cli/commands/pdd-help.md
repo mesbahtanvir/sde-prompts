@@ -32,6 +32,13 @@ Display all available PRD Driven Development commands and their usage.
 |---------|-------|-------------|
 | `/pdd-code-compact` | `/pdd-code-compact` | Audit code against Clean Code principles |
 
+### Quality Audits (each outputs a report)
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/pdd-audit-docs` | `/pdd-audit-docs` | Audit documentation completeness |
+| `/pdd-audit-architecture` | `/pdd-audit-architecture` | Audit structural health and dependencies |
+| `/pdd-audit-performance` | `/pdd-audit-performance` | Audit performance issues and optimizations |
+
 ### Tooling
 | Command | Usage | Description |
 |---------|-------|-------------|
