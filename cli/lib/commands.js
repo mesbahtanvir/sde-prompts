@@ -153,6 +153,9 @@ After installation, these slash commands are available in Claude Code:
   /pdd-audit-security     Audit security vulnerabilities
   /pdd-audit-production   Full production readiness check
   /pdd-audit-all          Run all audits in sequence
+  /pdd-audit-docs         Audit documentation completeness
+  /pdd-audit-architecture Audit structural health and dependencies
+  /pdd-audit-performance  Audit performance issues
   /pdd-code-compact       Audit code with Clean Code principles
 
 Learn more: https://github.com/mesbahtanvir/prd-driven-dev
