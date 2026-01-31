@@ -41,6 +41,12 @@ Display all available PRD Driven Development commands and their usage.
 | `/pdd-audit-architecture` | `/pdd-audit-architecture` | Audit structural health and dependencies |
 | `/pdd-audit-e2e` | `/pdd-audit-e2e` | Audit E2E test coverage |
 
+### Project Scaffolding
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/pdd-bootstrap` | `/pdd-bootstrap [name]` | Bootstrap a full-stack app (Next.js + FastAPI + Firebase) |
+
 ### Tooling
 
 | Command | Usage | Description |
