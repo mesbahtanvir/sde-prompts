@@ -51,6 +51,7 @@ Display all available PRD Driven Development commands and their usage.
 
 | Command | Usage | Description |
 |---------|-------|-------------|
+| `/pdd-export` | `/pdd-export` | Export consolidated project state from all PRDs |
 | `/pdd-help` | `/pdd-help` | Show this help message |
 | `/pdd-init` | `/pdd-init` | Initialize PDD in current project |
 | `/pdd-upgrade` | `/pdd-upgrade` | Check for and install updates |
