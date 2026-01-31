@@ -1,6 +1,6 @@
 {
   "name": "prd-driven-dev",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "PRD Driven Development - Claude Code commands for AI-assisted software development",
   "main": "lib/index.js",
   "bin": {
